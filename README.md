@@ -9,9 +9,9 @@ pbuilderrc in /etc to add the correct repos to a given cow.
 ## Example Usage ##
 <pre>
     class { "debbuilder":
-      pe => false,
+      pe       => false,
       use_cows => true,
-      cows => ["lucid", "squeeze", "precise"],
+      cows     => ["lucid", "squeeze", "precise"],
     }
 </pre>
 
