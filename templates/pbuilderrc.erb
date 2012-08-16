@@ -73,6 +73,7 @@ OTHERMIRROR="deb http://apt.puppetlabs.com ${DIST} main dependencies"
 
 # Add apt.puppetlabs.com keyrings
 DEBOOTSTRAPOPTS=("${DEBOOTSTRAPOPTS[@]}" "--keyring=/usr/share/keyrings/puppetlabs-keyring.gpg")
+APTKEYRINGS="/usr/share/keyrings/puppetlabs-keyring.gpg"
 
 <% if @pe then %>
 if [ -n "${PE_VER}" ]; then
@@ -80,6 +81,7 @@ if [ -n "${PE_VER}" ]; then
 
   # Add pluto
   DEBOOTSTRAPOPTS=("${DEBOOTSTRAPOPTS[@]}" "--keyring=/usr/share/keyrings/pluto-build-keyring.gpg")
+  APTKEYRINGS=("${APTKEYRINGS[@]}" "/usr/share/keyrings/pluto-build-keyring.gpg")
 fi
 <% end %>
 
